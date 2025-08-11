@@ -28,8 +28,28 @@
 
 Download Witsy from [witsyai.com](https://witsyai.com) or from the [releases](https://github.com/nbonamy/witsy/releases) page.
 
-On macOS you can also `brew install --cask witsy`.
+ On macOS you can also `brew install --cask witsy`.
 
+## Frontend
+
+A React + TypeScript frontend is available under `frontend/` to submit scans and view results.
+
+### Development
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+The UI provides a `ScanForm` for entering targets and options and a `ResultsView` that polls `GET /scan/{id}` to display secrets, endpoints, file types, errors, and informational messages.
 
 ## What is Witsy?
 
